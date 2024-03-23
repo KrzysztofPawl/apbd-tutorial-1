@@ -42,12 +42,12 @@ static double CalculateAverage(int[] numbers)
         return 0; // Zwraca 0 dla pustej tablicy
     }
 
-    double sum = 0;
+    double total = 0;
     foreach (int number in numbers)
     {
-        sum += number;
+        total += number;
     }
-    return sum / numbers.Length;
+    return total / numbers.Length;
 }
 
 int[] numbers = { 1, 2, 3, 4, 5 };
