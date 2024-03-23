@@ -34,3 +34,22 @@ else
 {
     Console.WriteLine("Invalid choice");
 }
+
+static double CalculateAverage(int[] numbers)
+{
+    if (numbers.Length == 0)
+    {
+        return 0; // Zwraca 0 dla pustej tablicy
+    }
+
+    double sum = 0;
+    foreach (int number in numbers)
+    {
+        sum += number;
+    }
+    return sum / numbers.Length;
+}
+
+int[] numbers = { 1, 2, 3, 4, 5 };
+double average = CalculateAverage(numbers);
+Console.WriteLine($"The average is: {average}");
