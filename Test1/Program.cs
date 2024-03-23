@@ -53,3 +53,25 @@ static double CalculateAverage(int[] numbers)
 int[] numbers = { 1, 2, 3, 4, 5 };
 double average = CalculateAverage(numbers);
 Console.WriteLine($"The average is: {average}");
+
+//Zad 4
+static int FindMaxValue(int[] numbers2)
+{
+    if (numbers2.Length == 0)
+    {
+        throw new ArgumentException("Array cannot be empty.");
+    }
+
+    int maxValue = numbers2[0];
+    foreach (int number in numbers2)
+    {
+        if (number > maxValue)
+        {
+            maxValue = number;
+        }
+    }
+    return maxValue;
+}
+int[] numbers2 = { 1, 3, 5, 7, 9, 2, 4, 6, 8, 0 };
+int max = FindMaxValue(numbers2);
+Console.WriteLine($"The maximum value is: {max}");
